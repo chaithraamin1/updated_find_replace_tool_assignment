@@ -1,0 +1,51 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="container">
+        <h1 class="anim textTitle">Find and Replace Tool</h1>
+
+        <div class="find-replace-widget">
+          <!-- Input Text Area -->
+          <textarea [(ngModel)]="text" (input)="updateHighlight()" placeholder="Paste or enter your text here..."
+            rows="5" cols="30"></textarea>
+
+          <!-- Find and Replace Inputs -->
+          <div class="controls">
+            <div class="d-flex">
+              <div class="input-group mb-3" id="inputGroupSearch">
+                <input type="text" class="form-control" placeholder="Find the phrase or text here..." [(ngModel)]="find"
+                  (input)="updateHighlight()">
+                <button class="btnSearch" (click)="findMatches()">Search</button>
+              </div>
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Replace phrase or text here..."
+                  [(ngModel)]="replace">
+                <button class="btnReplace" id="btnReplace" (click)="replaceOne()">Replace</button>
+              </div>
+            </div>
+            <!-- Actions -->
+            <div class="btnGroup">
+              <button class="anim btn" id="btnPrevious" (click)="previousMatch()">Previous</button>
+              <button class="anim btn" id="btnNext" (click)="nextMatch()">Next</button>
+              <button class="anim btn" id="btnReplaceAll" (click)="replaceAll()">Replace All</button>
+              <button class="anim btn" id="btnUndo" (click)="undo()">Undo</button>
+              <button class="anim btn" id="btnRedo" (click)="redo()">Redo</button>
+              <button class="anim btn" id="btnClear" (click)="clearText()">Clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <!-- Preview Text-->
+      <h3>Preview:</h3>
+      <div [innerHTML]="highlightedText" class="preview"></div>
+
+      <!-- display message -->
+      <div class="mt-2">
+        <div id="toaster" class="toaster"></div>
+      </div>
+    </div>
+  </div>
+</div>

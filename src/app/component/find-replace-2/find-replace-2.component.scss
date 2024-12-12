@@ -1,0 +1,161 @@
+.find-replace-widget {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  .textTitle{
+    margin-left: 19px;
+  }
+  .preview {
+    white-space: pre-wrap;
+    background: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    max-height: 700px !important;
+    height: 85%;
+    color: white;
+    overflow-y: scroll;
+}
+  
+  .highlight {
+    background-color: yellow !important;
+}
+.current {
+  border: 2px solid red;
+} 
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(45deg, #f6d365, #fda085, #fbc2eb);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  float: left;
+  margin-bottom: 10px;
+  animation-delay: 0.5s;
+
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.checkboxGroup{
+  text-align: left;
+  width: 100%;
+  margin: 5px 0;
+}
+.checkboxGroup label{
+  margin-right: 20px;
+}
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.btnSearch,.btnReplace{
+  background: linear-gradient(to right, #003366, #660066);
+  cursor: pointer !important;
+  transition: 0.5s;
+  color: white;
+  padding: 0px 10px;
+}
+#inputGroupSearch{
+  margin-right: 10px;
+}
+.btn {
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 3px;
+  background: linear-gradient(to right, #003366, #660066);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer !important;
+  transition: 0.5s;
+}
+
+.btn:hover{
+  background: linear-gradient(to right, #b62858, #1a021a);
+  cursor: pointer !important;
+  box-shadow:2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  color: red;
+}
+.controls{
+  background-image: linear-gradient(to right,pink,purple);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+// Animation code
+.anim{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+100%{
+   opacity: 1;
+   transform: translateY(0px);
+}
+}
+#btnPrevious{
+animation-delay: 1s;
+}
+#btnNext{
+animation-delay: 1.5s;
+}
+#btnReplace{
+animation-delay: 2s;
+}
+#btnReplaceAll{
+animation-delay: 2.5s;
+}
+#btnUndo{
+animation-delay: 3s;
+}
+#btnRedo{
+animation-delay: 3.5s;
+}
+#btnClear{
+animation-delay: 4.5s;
+}
+// toaster
+.toaster {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #a03e3e;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.toaster.show {
+  opacity: 1;
+  visibility: visible;
+}
